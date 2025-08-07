@@ -1,5 +1,6 @@
 import "./App.css";
 import { DrinkButtons } from "./components/DrinkButtons";
+import { coffee, tea } from "./utils/data";
 
 export const App = () => {
   const greeting = "Welcome";
@@ -7,7 +8,7 @@ export const App = () => {
   return (
     <>
       <h1>{greeting}</h1>
-      <DrinkButtons />
+      <DrinkButtons drinkOne={tea.name} drinkTwo={coffee.name} />
     </>
   );
 };
