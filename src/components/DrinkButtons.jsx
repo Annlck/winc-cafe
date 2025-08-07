@@ -1,6 +1,6 @@
 import "./DrinkButtons.css";
 
-export const DrinkButtons = () => {
+export const DrinkButtons = ({ drinkOne, drinkTwo }) => {
   const question = "Would you like some tea or coffee?";
 
   return (
@@ -8,8 +8,8 @@ export const DrinkButtons = () => {
       <h2>{question}</h2>
 
       <div className="button-group">
-        <div className="button">Tea</div>
-        <div className="button">Coffee</div>
+        <div className="button">{drinkOne}</div>
+        <div className="button">{drinkTwo}</div>
       </div>
     </>
   );
