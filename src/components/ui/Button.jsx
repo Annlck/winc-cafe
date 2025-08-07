@@ -1,5 +1,5 @@
 import "./Button.css";
 
-export const Button = (text) => {
+export const Button = ({ text }) => {
   return <div className="button">{text}</div>;
 };
