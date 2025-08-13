@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import { DrinkButtons } from "./components/DrinkButtons";
 import { DrinkChoice } from "./components/ui/DrinkChoice";
 import { coffee, tea } from "./utils/data";
@@ -12,7 +13,7 @@ const UserChoice = (drink) => {
 
 export const App = () => {
   const greeting = "Welcome";
-  const userDrink = tea;
+  const [userDrink, setUserDrink] = useState(coffee);
 
   return (
     <>
