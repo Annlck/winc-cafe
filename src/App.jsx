@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import { DrinkButtons } from "./components/DrinkButtons";
 import { DrinkChoice } from "./components/ui/DrinkChoice";
+import { DrinkSearch } from "./components/DrinkSearch";
 import { coffee, tea } from "./utils/data";
 
 const UserChoice = (drink) => {
@@ -13,7 +14,7 @@ const UserChoice = (drink) => {
 
 export const App = () => {
   const greeting = "Welcome";
-  const [userDrink, setUserDrink] = useState(coffee);
+  const [userDrink, setUserDrink] = useState();
 
   return (
     <>
@@ -22,6 +23,7 @@ export const App = () => {
       ) : (
         <div className="WelcomeMessage">
           <h1>{greeting}</h1>
+          <DrinkSearch />
           <DrinkButtons drinkOne={tea.name} drinkTwo={coffee.name} />
         </div>
       )}
