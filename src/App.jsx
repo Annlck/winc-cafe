@@ -24,8 +24,6 @@ export const App = () => {
         <div className="WelcomeMessage">
           <h1>{greeting}</h1>
           <DrinkSearch />
-          <DrinkItem />
-          <DrinkList />
         </div>
       )}
     </>
