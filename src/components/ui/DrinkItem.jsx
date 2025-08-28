@@ -2,9 +2,9 @@ import "./DrinkItem.css";
 
 export const DrinkItem = ({ drink }) => {
   return (
-    <div>
-      <p>{drink.name}</p>
+    <div class="drink-item">
       <img src={drink.imgUrl} alt={drink.alt} />
+      <p>{drink.name}</p>
     </div>
   );
 };
