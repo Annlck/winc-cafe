@@ -2,6 +2,8 @@ import "./App.css";
 import { useState } from "react";
 import { DrinkChoice } from "./components/ui/DrinkChoice";
 import { DrinkSearch } from "./components/DrinkSearch";
+import { DrinkItem } from "./components/ui/DrinkItem";
+import { DrinkList } from "./components/ui/DrinkItem";
 
 const UserChoice = (drink) => {
   if (drink) {
@@ -22,9 +24,8 @@ export const App = () => {
         <div className="WelcomeMessage">
           <h1>{greeting}</h1>
           <DrinkSearch />
-          {/* <AllDrinks /> */}
-          {/* <AllDrinksImages /> */}
-          <AllDrinksWithImages />
+          <DrinkItem />
+          <DrinkList />
         </div>
       )}
     </>
