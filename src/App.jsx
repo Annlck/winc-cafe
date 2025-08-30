@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { DrinkChoice } from "./components/ui/DrinkChoice";
+import { DrinkChoice } from "./components/DrinkChoice";
 import { DrinkSearch } from "./components/DrinkSearch";
 
 export const App = () => {

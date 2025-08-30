@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { availableDrinks } from "../utils/data";
-import { DrinkList } from "./ui/DrinkList";
+import { DrinkList } from "./DrinkList";
 import { TextInput } from "./ui/TextInput";
 
 export const DrinkSearch = ({ clickFn }) => {
