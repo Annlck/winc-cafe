@@ -1,7 +1,7 @@
 export const DrinkChoice = ({ drink }) => {
   return (
     <>
-      <p>{drink.name}</p>
+      <h2>{drink.name}</h2>
       <img src={drink.imgUrl} alt={drink.alt}></img>
       <p>Your {drink.name} will be ready in a few minutes.</p>
     </>
