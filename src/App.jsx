@@ -8,15 +8,15 @@ export const App = () => {
   const [userDrink, setUserDrink] = useState();
 
   return (
-    <>
+    <div className="App">
       {userDrink ? (
-        <DrinkChoice drink={userDrink} />
+        <DrinkChoice drink={userDrink} clickFn={setUserDrink} />
       ) : (
-        <div className="WelcomeMessage">
+        <>
           <h1>{greeting}</h1>
           <DrinkSearch clickFn={setUserDrink} />
-        </div>
+        </>
       )}
-    </>
+    </div>
   );
 };
