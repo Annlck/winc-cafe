@@ -4,14 +4,19 @@ import { DrinkList } from "./DrinkList";
 import { TextInput } from "./ui/TextInput";
 
 export const DrinkSearch = ({ clickFn }) => {
-  const [searchField, setSearchField] = useState("test");
+  const [searchField, setSearchField] = useState("");
+
+  const handleChange = (event) => setSearchField(event.target.value);
+
+  const matchedDrinks = availableDrinks.filter((drink) => {
+    return drink.name.toLowerCase().includes(searchField.toLocaleLowerCase());
+  });
 
   return (
     <>
       <label for="text-input">Find your drink:</label>
-      <TextInput />
-      <DrinkList clickFn={clickFn} allDrinks={availableDrinks} />
-      <p>{searchField}</p>
+      <TextInput changeFn={handleChange} />
+      <DrinkList clickFn={clickFn} allDrinks={matchedDrinks} />
     </>
   );
 };
