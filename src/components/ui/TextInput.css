@@ -1,7 +1,0 @@
-::selection {
-  background-color: hsl(136, 26%, 82%);
-}
-
-input:focus {
-  background-color: hsl(136, 26%, 92%);
-}
