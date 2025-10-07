@@ -15,7 +15,7 @@ export const DrinkSearch = ({ clickFn }) => {
 
   return (
     <>
-      <label for="text-input">Find your drink:</label>
+      <label for="text-input">Find your drink: </label>
       <TextInput changeFn={handleChange} w={200} mb={8} />
       <DrinkList clickFn={clickFn} allDrinks={matchedDrinks} />
     </>
