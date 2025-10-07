@@ -1,7 +1,7 @@
-import "./Button.css";
+import { Button as CButton } from "@chakra-ui/react";
 
 export const Button = ({ text, clickFn }) => (
-  <button className="button" onClick={clickFn}>
+  <CButton colorScheme="teal" size="md" onClick={clickFn}>
     {text}
-  </button>
+  </CButton>
 );
