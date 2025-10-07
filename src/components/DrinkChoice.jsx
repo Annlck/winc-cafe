@@ -17,7 +17,9 @@ export const DrinkChoice = ({ drink, clickFn }) => {
       <Text>
         Your {drink.name.toLowerCase()} will be ready in a few minutes.
       </Text>
-      <Button text={"Change selection"} clickFn={() => clickFn()} />
+      <Button onClick={() => clickFn()} variant="ghost">
+        Change selection
+      </Button>
     </>
   );
 };
