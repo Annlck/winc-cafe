@@ -40,12 +40,21 @@ export const DrinkChoice = ({ drink, clickFn }) => {
         </Button>
       </Flex>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        size={{ base: "full", md: "md" }}
+      >
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Confirm your order</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
+          <ModalBody
+            display="flex"
+            justifyContent="center"
+            alignItems={{ base: "center", md: "flex-start" }}
+            flexDir="column"
+          >
             <Text>1x {drink.name}</Text>
           </ModalBody>
 
