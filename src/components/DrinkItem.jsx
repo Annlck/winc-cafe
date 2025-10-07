@@ -7,18 +7,20 @@ export const DrinkItem = ({ drink, clickFn }) => {
     <Flex
       onClick={() => clickFn(drink)}
       bgColor={"hsl(34, 64%, 98%)"}
-      width={"100%"}
       cursor={"pointer"}
       margin={"1rem"}
-      flexWrap={"wrap"}
-      flexDirection={"horizontal"}
       borderRadius={"2rem"}
       padding={"0.5rem"}
-      alignItems={"center"}
       _hover={{ bgColor: "hsl(136, 26%, 92%)" }}
+      alignItems="center"
+      width={{ base: "100%", md: "300px" }}
     >
-      <Image src={drink.imgUrl} alt={drink.alt} boxSize="80px" />
-      <Text paddingLeft={"2rem"} fontSize={"xl"}>
+      <Image
+        src={drink.imgUrl}
+        alt={drink.alt}
+        boxSize={{ base: "60px", md: "80px" }}
+      />
+      <Text paddingLeft={"2rem"} fontSize={{ base: "lg", md: "xl" }}>
         {drink.name}
       </Text>
     </Flex>

@@ -1,12 +1,17 @@
 import { DrinkItem } from "./DrinkItem";
-import { Container } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 export const DrinkList = ({ allDrinks, clickFn }) => {
   return (
-    <Container centerContent>
+    <Flex
+      flexDirection={{ base: "vertical", md: "horizontal" }}
+      flexWrap="wrap"
+      alignItems="center"
+      justifyContent={{ base: "flex-start", md: "center" }}
+    >
       {allDrinks.map((item) => (
         <DrinkItem key={item.id} drink={item} clickFn={clickFn} />
       ))}
-    </Container>
+    </Flex>
   );
 };
